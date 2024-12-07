@@ -71,4 +71,4 @@ function updatePooks() {
   }
 }
 
-updatePooks();
+setInterval(updatePooks, 10000);
