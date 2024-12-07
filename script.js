@@ -1,3 +1,5 @@
+import { unlockPook } from './pook-viewer.js';
+
 var rndRarity
 var rndIndex 
 
@@ -46,3 +48,5 @@ function openPack(){
     }
   }
 }
+
+unlockPook(document.getElementById("picPookPulled").src);

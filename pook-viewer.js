@@ -42,10 +42,12 @@ function eraseCookie(name) {
 // Start original code
 
 function resetPooks() {
-  for (let i = 0; i < pooks.length; ++i) {
-    const pook = pooks[i];
-    
-    createCookie(pook.id, "false", 7);
+  if confirm("Are you sure you want to restart your collection?") {
+     for (let i = 0; i < pooks.length; ++i) {
+        const pook = pooks[i];
+
+        createCookie(pook.src, "false", 7);
+    } 
   }
 }
 
@@ -53,7 +55,7 @@ function updatePooks() {
   for (let i = 0; i < pooks.length; ++i) {
       const pook = pooks[i];
       
-      const unlocked = readCookie(pook.id);
+      const unlocked = readCookie(pook.src);
       
       if (unlocked == "true") {
         document.getElementById(pook.id).src = pook.src;
@@ -64,10 +66,6 @@ function updatePooks() {
   }
 }
 
-function unlockPook(pook) {
-  createCookie(pook.id, "true", 7);
+export function unlockPook(pook_src) {
+  createCookie(pook_src, "true", 7);
 }
-
-resetPooks();
-unlockPook(pooks[0]);
-unlockPook(pooks[5]);
