@@ -61,7 +61,7 @@ function updatePooks() {
         document.getElementById(pook.id).src = pook.src;
       }
       else {
-        document.getElementById(pook.id).src = "https://millertime72.github.io/PookGame/images/PookPackClosed.png";
+        document.getElementById(pook.id).src = "https://github.com/Millertime72/PookGame/blob/main/images/LockedPook.png";
       }
   }
 }
