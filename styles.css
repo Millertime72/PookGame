@@ -1,0 +1,29 @@
+body{
+  padding: 25px;
+}
+.title {
+	color: #5C6AC4;
+}
+.packStyle{
+  display: block;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width:75%;
+}
+.pookStyle{
+  display: block;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width:75%;
+}
+.packButton{
+  display: block;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pulledInfo{
+  text-align: center;
+}
