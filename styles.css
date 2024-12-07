@@ -3,6 +3,11 @@ body {
   padding: 25px;
 }
 
+.table {
+  display: block;
+  align: auto;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
