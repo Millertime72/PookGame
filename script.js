@@ -1,7 +1,19 @@
-import { unlockPook } from './pook-viewer.js';
-
 var rndRarity
 var rndIndex 
+
+function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function unlockPook(pook_src) {
+  createCookie(pook_src, "true", 7);
+}
 
 function openPack(){
   document.getElementById("btnOpenPack").disabled = true
@@ -47,6 +59,5 @@ function openPack(){
      document.getElementById("picPookPulled").src = "https://millertime72.github.io/PookGame/images/rare/RareFrog.png";
     }
   }
+    unlockPook(document.getElementById("picPookPulled").src);
 }
-
-unlockPook(document.getElementById("picPookPulled").src);

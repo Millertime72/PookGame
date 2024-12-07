@@ -42,13 +42,15 @@ function eraseCookie(name) {
 // Start original code
 
 function resetPooks() {
-  if confirm("Are you sure you want to restart your collection?") {
-     for (let i = 0; i < pooks.length; ++i) {
-        const pook = pooks[i];
+    let proceed = confirm("Are you sure you want to restart your collection?");
+    
+    if (proceed == true) {
+        for (let i = 0; i < pooks.length; ++i) {
+            const pook = pooks[i];
 
-        createCookie(pook.src, "false", 7);
-    } 
-  }
+            createCookie(pook.src, "false", 7);
+        } 
+    }
 }
 
 function updatePooks() {
@@ -61,13 +63,9 @@ function updatePooks() {
         document.getElementById(pook.id).src = pook.src;
       }
       else {
-        document.getElementById(pook.id).src = "https://github.com/Millertime72/PookGame/blob/main/images/LockedPook.png";
+        document.getElementById(pook.id).src = "https://millertime72.github.io/PookGame/images/LockedPook.png";
       }
   }
 }
 
-export function unlockPook(pook_src) {
-  createCookie(pook_src, "true", 7);
-}
-
-setInterval(updatePooks, 1000);
+updatePooks();
