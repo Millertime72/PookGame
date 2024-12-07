@@ -37,7 +37,7 @@ function openPack() {
     document.getElementById("picPack").src="https://millertime72.github.io/PookGame/images/PookPackOpened.png";
     rndRarity = Math.floor(Math.random() * 101);
     
-    if (rndRarity < 80) {//Common
+    if (rndRarity < 55) {//Common
         document.getElementById("txtRarityPulled").innerText = "Common";
         rndIndex = Math.floor(Math.random() * 3) + 1;
         if (rndIndex == 1){
@@ -50,7 +50,7 @@ function openPack() {
             document.getElementById("txtPookPulled").innerText = "Panda";
             document.getElementById("picPookPulled").src = "https://millertime72.github.io/PookGame/images/common/CommonPanda.png";
     }
-    } else if (rndRarity > 95){//Legendary
+    } else if (rndRarity > 85){//Legendary
           document.getElementById("txtRarityPulled").innerText = "Legendary";
           rndIndex = Math.floor(Math.random() * 3) + 1;
             if (rndIndex==1){
