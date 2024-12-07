@@ -11,9 +11,25 @@ function createCookie(name,value,days) {
 	document.cookie = name+"="+value+expires+"; path=/";
 }
 
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
 function unlockPook(pook_src) {
-    console.log(pook_src);
-    createCookie(pook_src, "true", 7);
+    const pook_state = readCookie(pook_src);
+    
+    if (pook_state == "true") {
+        alert("You got a duplicate ... D:");
+    } else {
+        createCookie(pook_src, "true", 7);
+    }
 }
 
 function openPack() {
