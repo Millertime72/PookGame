@@ -5,7 +5,7 @@ body {
 
 .table {
   display: block;
-  align: auto;
+  margin: auto;
 }
 
 .row {
