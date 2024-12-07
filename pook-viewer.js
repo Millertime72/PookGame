@@ -69,3 +69,7 @@ function updatePooks() {
 export function unlockPook(pook_src) {
   createCookie(pook_src, "true", 7);
 }
+
+setInterval(function () {
+	updatePooks();
+}, 1000);
