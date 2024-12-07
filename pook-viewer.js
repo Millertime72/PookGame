@@ -51,6 +51,8 @@ function resetPooks() {
             createCookie(pook.src, "false", 7);
         } 
     }
+    
+    updatePooks();
 }
 
 function updatePooks() {
