@@ -58,7 +58,8 @@ function updatePooks() {
       const pook = pooks[i];
       
       const unlocked = readCookie(pook.src);
-      
+      console.log(pook.src);
+      console.log(unlocked);
       if (unlocked == "true") {
         document.getElementById(pook.id).src = pook.src;
       }
