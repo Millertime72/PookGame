@@ -41,18 +41,8 @@ function eraseCookie(name) {
 
 // Start original code
 
-function resetPooks() {
-    let proceed = confirm("Are you sure you want to restart your collection?");
-    
-    if (proceed == true) {
-        for (let i = 0; i < pooks.length; ++i) {
-            const pook = pooks[i];
-
-            createCookie(pook.src, "false", 7);
-        } 
-    }
-    
-    updatePooks();
+function openPook() {
+    window.open("https://millertime72.github.io/PookGame/", '_blank').focus();
 }
 
 function updatePooks() {
@@ -71,4 +61,16 @@ function updatePooks() {
   }
 }
 
-setInterval(updatePooks, 10000);
+function resetPooks() {
+    let proceed = confirm("Are you sure you want to restart your collection?");
+    
+    if (proceed == true) {
+        for (let i = 0; i < pooks.length; ++i) {
+            const pook = pooks[i];
+
+            createCookie(pook.src, "false", 7);
+        } 
+    }
+    
+    updatePooks();
+}
