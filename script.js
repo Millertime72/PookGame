@@ -36,7 +36,7 @@ function openPack() {
     }
     } else if (rndRarity > 95){//Legendary
           document.getElementById("txtRarityPulled").innerText = "Legendary";
-          Math.floor(Math.random() * 3) + 1;
+          rndIndex = Math.floor(Math.random() * 3) + 1;
             if (rndIndex==1){
                 document.getElementById("txtPookPulled").innerText = "Carrot Rabbit";
                 document.getElementById("picPookPulled").src = "https://millertime72.github.io/PookGame/images/legendary/LegendaryCarrotRabbit.png";
