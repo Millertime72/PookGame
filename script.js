@@ -26,7 +26,7 @@ function unlockPook(pook_src) {
     const pook_state = readCookie(pook_src);
     
     if (pook_state == "true") {
-        alert("You got a duplicate ... D:");
+        document.getElementById("txtPookPulled").innerText = "You got a duplicate ... D:";
     } else {
         createCookie(pook_src, "true", 7);
     }
